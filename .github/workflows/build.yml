@@ -73,7 +73,7 @@ jobs:
       - name: Download inputs (IP lists + Geobases)
         working-directory: geoip
         run: |
-          set -euo pipefail
+          set -euxo pipefail
           ${{ env.CURL }} -o whitelist.txt https://raw.githubusercontent.com/escapingworm/russia-whitelist/refs/heads/main/ru-whitelist-cidr.txt
           ${{ env.CURL }} -o antifilterdownloadcommunity.txt https://community.antifilter.download/list/community.lst
           ${{ env.CURL }} -o refilter.txt https://raw.githubusercontent.com/1andrevich/Re-filter-lists/refs/heads/main/ipsum.lst
